@@ -4,20 +4,20 @@ import { menuItems } from "./menu";
 const Navbar: React.FC = () => {
   return (
     <div>
-      <nav className=" border-gray-200 dark:bg-transparent text-center">
-          <div className="flex md:order-2 md:flex md:flex-wrap md:items-center md:my-6 md:justify-center md:gap-4 md:w-full">
+      <nav className="border-gray-200 dark:bg-transparent text-center xl:mx-56">
+          <div className="flex bg-[#2C224B] p-4 md:order-2 md:flex md:flex-wrap md:items-center md:justify-center md:gap-4 md:w-full">
             <div className="font-merienda text-base">
               <ul className="flex flex-col p-4 md:p-0 font-medium border border-gray-100 rounded-lg md:space-x-8 md:text-lg rtl:space-x-reverse md:flex-row md:border-0 dark:border-gray-700">
                 {menuItems.map((item,index)=>(
-                   <li key={index} className="relative group">
+                   <li key={index} className="relative group hover:shadow-md hover:shadow-slate-500 hover:scale-105 hover:transition-transform hover:ease-in-out hover:duration-500">
                    <Link
                      to={item.link}
-                     className="block py-2 px-3 rounded md:bg-transparent text-white md:p-0 "
+                     className="block rounded text-white md:p-0 "
                      aria-current="page"
                    >
                      {item.name}
                      {/* Alt çizgi hover animasyonu */}
-                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
+                     <span className="absolute mt-9 left-0 w-0 h-1 bg-black transition-all duration-500 group-hover:w-full"></span>
                    </Link>
                  </li>
                 ))}
