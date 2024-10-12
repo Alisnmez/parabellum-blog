@@ -5,6 +5,7 @@ import MangaWebtoon from './pages/MangaWebtoon';
 import Futbol from './pages/Futbol';
 import Finans from './pages/Finans';
 import FilmDizi from './pages/FilmDizi';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/finans" element={<Finans />} />
         <Route path="/filmdizi" element={<FilmDizi />} />
       </Routes>
+      <Footer/>
     </div>
   );
 }

@@ -1,21 +1,22 @@
 import React from 'react'
 
 const HomeContent = () => {
- interface cards{
+ interface cardsType{
     id:number;
     title:string;
     description:string;
+    link:string;
  }
 
 
-    const cards:cards[] = [
-        { id: 1, title: 'Card 1', description: 'This is the first card.' },
-        { id: 2, title: 'Card 2', description: 'This is the second card.' },
-        { id: 3, title: 'Card 3', description: 'This is the third card.' },
-        { id: 4, title: 'Card 4', description: 'This is the fourth card.' },
-        { id: 5, title: 'Card 4', description: 'This is the fourth card.' },
-        { id: 6, title: 'Card 4', description: 'This is the fourth card.' },
-        { id: 7, title: 'Card 4', description: 'This is the fourth card.' },
+    const cards:cardsType[] = [
+        { id: 1, title: 'Card 1', description: 'This is the first card.',link:'link' },
+        { id: 2, title: 'Card 2', description: 'This is the second card.',link:'link' },
+        { id: 3, title: 'Card 3', description: 'This is the third card.',link:'link' },
+        { id: 4, title: 'Card 4', description: 'This is the fourth card.',link:'link' },
+        { id: 5, title: 'Card 4', description: 'This is the fourth card.',link:'link' },
+        { id: 6, title: 'Card 4', description: 'This is the fourth card.',link:'link' },
+        { id: 7, title: 'Card 4', description: 'This is the fourth card.',link:'link' },
       ];
   return (
     <div className='flex flex-col xl:mx-56'>

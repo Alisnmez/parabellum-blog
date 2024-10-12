@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
             <div className="font-merienda text-base">
               <ul className="flex flex-col p-4 md:p-0 font-medium border border-gray-100 rounded-lg md:space-x-8 md:text-lg rtl:space-x-reverse md:flex-row md:border-0 dark:border-gray-700">
                 {menuItems.map((item,index)=>(
-                   <li key={index} className="relative group hover:shadow-md hover:shadow-slate-500 hover:scale-105 hover:transition-transform hover:ease-in-out hover:duration-500">
+                   <li key={index} className="relative group ">
                    <Link
                      to={item.link}
                      className="block rounded text-white md:p-0 "

@@ -1,24 +1,16 @@
 import financePosts from "./blogs/Finans";
 import footballPosts from "./blogs/Futbol";
-import Gundem from "./blogs/Gundem";
 import mangaPosts from "./blogs/MangaWebtoon";
 import filmPosts from "./blogs/FilmDizi";
 
-const getRandomPost = (posts: string | any[]) => {
-  const randomIndex = Math.floor(Math.random() * posts.length);
-  return posts[randomIndex];
-};
+
 const Card = () => {
-  const randomMangaPost = getRandomPost(mangaPosts);
-  const randomFinancePost = getRandomPost(financePosts);
-  const randomFootballPost = getRandomPost(footballPosts);
-  const randomFilmPost = getRandomPost(filmPosts);
 
   const heroSectionPosts = [
-    randomMangaPost,
-    randomFootballPost,
-    randomFinancePost,
-    randomFilmPost,
+    ...mangaPosts,
+    ...footballPosts,
+    ...financePosts,
+    ...filmPosts,
   ];
   return (
     <div className="flex flex-col w-full items-center h-auto md:flex-row gap-10 p-4 ">
@@ -39,7 +31,7 @@ const Card = () => {
             <p className="flex items-center justify-center w-full font-serif max-w-56 text-sm line-clamp-2 overflow-hidden">
               {post.content}
             </p>
-            <p className="text-xs h-auto w-full text-end">{/*Sene veya ek content*/}</p>
+            <p className="text-xs h-auto w-full text-end">{/*Sene veya ek*/}</p>
           </div>
         </div>
       ))}

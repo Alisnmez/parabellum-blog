@@ -47,7 +47,7 @@ const Slider: React.FC = () => {
   return (
     <div
       id="carouselExampleCaptions"
-      className="relative"
+      className="relative w-full max-w-[1110px] mx-auto" // Buraya genişlik sınıfı eklendi
       data-twe-carousel-init
       data-twe-ride="carousel"
       ref={carouselRef} 
@@ -191,7 +191,7 @@ const Slider: React.FC = () => {
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              d="M8.25 19.5l7.5-7.5-7.5-7.5"
+              d="M8.25 19.5L15.75 12 8.25 4.5"
             />
           </svg>
         </span>
