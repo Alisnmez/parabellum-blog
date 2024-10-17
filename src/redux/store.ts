@@ -1,15 +1,16 @@
+// src/redux/store.ts
 import { configureStore } from "@reduxjs/toolkit";
 import postSlice from "./slices/postSlice";
-// store'u yapılandırın
+
+
+// Store'u oluştur
 const store = configureStore({
   reducer: {
     posts: postSlice,
   },
-  // middleware'lar varsayılan olarak zaten eklendiği için burayı atlayabilirsiniz.
 });
 
-// RootState ve AppDispatch tiplerini tanımlayın ve export edin
+// RootState ve AppDispatch türlerini tanımla
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
-
 export default store;
